@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Q. given year is leap year or not.
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+class Logic
+{
+    void CheckLeapYear(int Year)
+    {
+        if((Year % 400 == 0) || (Year % 4 == 0) && (Year % 100 != 0))
+        {
+            System.out.println(Year+" is leap year");
+        }
+        else
+        {
+            System.out.println(Year+" is not  leap year");
+        }
+    }
+}
+
+
+class CheckLeapYear19_1
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.CheckLeapYear(2028);  
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// input : 2024
+// ouput : 2024 is leap year.
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
