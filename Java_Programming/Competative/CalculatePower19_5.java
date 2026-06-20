@@ -1,0 +1,39 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Q. Calculate the power of number
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+class Logic
+{
+    void CalculatePower(int Base, int exp)
+    {
+        int iDigit = 0;
+        int iCnt = 0;
+        int iAns  = 1;
+        for (iCnt = 1; iCnt <=exp ; iCnt++)
+        {
+           iAns = iAns * Base;
+        }
+        System.out.println("Power of number is : "+iAns);
+      
+    }
+}
+
+
+class CalculatePower19_5
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.CalculatePower(2,5);  
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// input : 2,5
+// ouput : Power of number is : 32
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
