@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Q.Write a program which accept string from user and copy the
+//   contents of that string into another string. (Implement strcpy()
+//   function)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+void strcpyX(char *src, char *dest)
+{
+  while(*src != '\0')
+  {
+    *dest = *src;
+    src++;
+    dest++;
+  }
+  *dest = '\0';
+
+}
+
+int main()
+{
+  char Brr[30];
+  char Arr[30] = "Marvellous Multi OS";
+
+
+  printf("Enter String :\n");
+  scanf("%[^'\n']s",Arr);
+
+  strcpyX(Arr,Brr);
+  printf("Copied string is : %s\n",Brr);
+
+  return 0;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// input : Darshan 
+// ouput : Copied string is : Darshan
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
