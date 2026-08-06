@@ -17,9 +17,9 @@
 //
 //////////////////////////////////////////////////////
 
-#define MAXINODE 5
-#define MAXFILESIZE 50
-#define MAXOPENFILES 5
+#define MAXINODE 50      //Max number of virtual files
+#define MAXFILESIZE 1024 //Maximum size of one file(bytes)1KB
+#define MAXOPENFILES 50
 
 #define READ 1
 #define WRITE 2
@@ -1267,6 +1267,8 @@ int main()
 {
     // Input command
     char str[80] = {'\0'};
+
+    char str1[10] = {'\0'};
     
     // Tokenised command
     char Command[5][20] = {{'\0'}};
@@ -1285,7 +1287,7 @@ int main()
     StartAuxillaryDataInitialisation();
 
     restore();
-
+    
     printf("-----------------------------------------------\n");
     printf("----- Marvellous CVFS started succesfully -----\n");
     printf("-----------------------------------------------\n");
@@ -1311,10 +1313,16 @@ int main()
             // Marvellous CVFS : > exit
             if(strcmp(Command[0],"exit") == 0)
             {
-               backup();
+               printf("Do you want to backup current files? (Y/N): ");
+               scanf("%s", str1);
 
+               if(strcmp(str1,"Y") == 0)
+               {
+                    backup();
+                    printf("Backup stored into backup.data\n");
+               }
+               
                printf("Thank you for using Marvellous CVFS\n");
-               printf("Backup stored into backup.data\n");
                printf("Deallocating all resources...\n");
                break;
             }
