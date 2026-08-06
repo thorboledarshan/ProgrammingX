@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+typedef unsigned int UINT;
+
+int main()
+{
+    
+    UINT iMask = 1;
+    UINT  iCnt = 0;
+    
+    for(iCnt = 1; iCnt <= 32; iCnt++)
+    {
+        printf("%d : %u\n",iCnt,iMask);
+        iMask = iMask<<1;
+    }
+
+    
+    return 0;
+}
