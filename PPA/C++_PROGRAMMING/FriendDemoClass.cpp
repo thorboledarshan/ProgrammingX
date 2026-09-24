@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+class Demo
+{
+  public: int i;
+  private: int j;
+  protected: int k;
+
+  public:
+   Demo()
+   {
+    i = 11;
+    j = 21;
+    k = 51;
+   }
+  friend void fun();    //friend function declaration.
+};
+
+class Hello
+{
+  public:
+   void fun()
+   {
+        Demo dobj;
+        cout<<dobj.i<<endl;
+        cout<<dobj.j<<endl;   
+        cout<<dobj.k<<endl;  
+   }
+   void gun()
+  {
+    Demo dobj;
+    cout<<dobj.i<<endl;
+    cout<<dobj.j<<endl;   
+    cout<<dobj.k<<endl;   
+  }
+};
+
+
+int main()
+{
+    hobj.gun();
+    hobj.fun();
+    return 0;
+}

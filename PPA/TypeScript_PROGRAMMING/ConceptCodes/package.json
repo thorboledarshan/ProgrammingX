@@ -1,0 +1,22 @@
+{
+  "name": "typescript_project",
+  "version": "1.0.0",
+  "type": "module",
+
+  "scripts": {
+    "dev": "tsx src/Main.ts",
+    "build": "tsc",
+    "start": "node dist/Main.js"
+  },
+
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+
+  "devDependencies": {
+    "@types/node": "^25.x",
+    "@types/prompt-sync": "^4.x",
+    "tsx": "^4.x",
+    "typescript": "^5.x"
+  }
+}

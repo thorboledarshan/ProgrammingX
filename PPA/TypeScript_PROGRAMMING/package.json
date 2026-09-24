@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/prompt-sync": "^4.2.3"
+    
+  }
+}
